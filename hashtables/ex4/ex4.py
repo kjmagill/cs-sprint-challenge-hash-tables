@@ -1,9 +1,19 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    nums = dict()
+    result = []
 
+    # traverse each number in the input array
+    for num in a:
+
+        # start by adding each number to the nums dict with a value of 1
+        nums[num] = 1
+
+        # if the current number is not zero and it's inverse is already in the dict,
+        # add the current number's absolute value to the result list
+        if num != 0 and -num in nums:
+            result.append(abs(num))
+
+    # return the resulting list of numbers
     return result
 
 
